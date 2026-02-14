@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Sweetoo ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --baby-pink: #fbc2eb;
+            --soft-pink: #ffd1ff;
+            --deep-pink: #ff4d6d;
+            --text-color: #a44a5f;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+            font-family: 'Noto Serif Devanagari', serif;
+            color: var(--text-color);
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            cursor: crosshair;
+        }
+
+        .moon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #fff, 0 0 40px #ffb3c1;
+            z-index: 1;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 450px;
+            margin: 40px 10px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            z-index: 10;
+            position: relative;
+        }
+
+        h1 { 
+            font-family: 'Dancing Script', cursive; 
+            font-size: 2.8rem; 
+            color: var(--deep-pink); 
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        h2 { font-style: italic; color: #ff8fa3; margin-bottom: 25px; font-weight: normal; font-size: 1.3rem; }
+        
+        .shayari-box {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            white-space: pre-line;
+            color: #5d2e37;
+            border: 1px solid #ffb3c1;
+            box-shadow: inset 0 0 10px rgba(255, 182, 193, 0.2);
+        }
+
+        /* Large Animated Heart Section */
+        .big-heart-container {
+            margin-top: 20px;
+            font-size: 80px;
+            filter: drop-shadow(0 0 10px #ffb3c1);
+            animation: heartBeat 1.5s infinite;
+            display: inline-block;
+        }
+
+        @keyframes heartBeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .heart-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+            20% { opacity: 0.6; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        .float-item {
+            position: absolute;
+            animation: floatUp linear infinite;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .pop-heart {
+            position: fixed;
+            pointer-events: none;
+            color: #ff0000;
+            font-size: 20px;
+            z-index: 9999;
+            animation: popOut 0.8s ease-out forwards;
+        }
+
+        @keyframes popOut {
+            0% { transform: scale(0) translate(0, 0); opacity: 1; }
+            100% { transform: scale(1.5) translate(var(--x), var(--y)); opacity: 0; }
+        }
+    </style>
+</head>
+<body onclick="popHearts(event)" ontouchstart="popHearts(event)">
+
+    <div class="moon"></div>
+    <div class="heart-animation" id="animation-container"></div>
+
+    <div class="container">
+        <h1>Happy Valentine's Day!</h1>
+        <h2>To my Sweetoo, Rishu ❤️</h2>
+        
+        <div class="shayari-box">
+<strong>उसके बिना चाँदनी</strong>
+
+बैठा हु चाँद की चाँदनी में,
+खोया हु उसके स्वर की रागिनी में। 
+याद उसकी दिल से जाती नहीं
+और उसके बिना ये चाँद की चाँदनी भाती नहीं।
+
+इस चाँदनी रात में वो मेरे साथ हो,
+ऐसे ख्वाब देखता हु मैं,
+बैठी हो वो मेरे बगल में 
+और दिल की बात आंखों से हो, 
+ऐसा सोचता हु मैं।
+
+ख्वाब तो देखें हैं बड़े-बड़े, 
+क्या ये सच हो पायेंगे 
+हकीक़त बनेंगे ये ख्वाब 
+या सपने बनकर रह जाएंगे।
+
+बैठा हु चाँद की चाँदनी में,
+खोया हु उसके स्वर की रागिनी में।
+याद उसकी दिल से जाती नहीं
+और उसके बिना ये चाँद की चाँदनी भाती नहीं।
+        </div>
+
+        <div class="big-heart-container">💖</div>
+
+        <p style="margin-top: 25px; font-size: 0.85rem; font-style: italic;">Tap on the screen for a surprise... ❤️</p>
+    </div>
+
+    <script>
+        function createFloater() {
+            const container = document.getElementById('animation-container');
+            const item = document.createElement('div');
+            item.classList.add('float-item');
+            
+            const isText = Math.random() > 0.7;
+            item.innerHTML = isText ? 'Sweetoo' : '💗';
+            item.style.color = isText ? '#ff8fa3' : '#ffb3c1';
+            item.style.fontSize = Math.random() * 15 + 15 + 'px';
+            
+            item.style.left = Math.random() * 100 + 'vw';
+            item.style.animationDuration = Math.random() * 5 + 7 + 's';
+            container.appendChild(item);
+
+            setTimeout(() => { item.remove(); }, 12000);
+        }
+        setInterval(createFloater, 1000);
+
+        function popHearts(e) {
+            const x = e.clientX || (e.touches ? e.touches[0].clientX : 0);
+            const y = e.clientY || (e.touches ? e.touches[0].clientY : 0);
+
+            for (let i = 0; i < 8; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('pop-heart');
+                heart.innerHTML = '❤️';
+                heart.style.left = x + 'px';
+                heart.style.top = y + 'px';
+                
+                const moveX = (Math.random() - 0.5) * 250;
+                const moveY = (Math.random() - 0.5) * 250;
+                heart.style.setProperty('--x', `${moveX}px`);
+                heart.style.setProperty('--y', `${moveY}px`);
+
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 800);
+            }
+        }
+    </script>
+</body>
+</html>
